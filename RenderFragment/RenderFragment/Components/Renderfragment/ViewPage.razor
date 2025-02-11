@@ -1,0 +1,67 @@
+﻿<div>@ChildContent</div>
+<div>@GetChildContent()</div>
+<div>@TableContent</div>
+
+@code {
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public Type ComponentType { get; set; }
+
+    private RenderFragment GetChildContent()
+    {
+        return builder =>
+        {
+            builder.OpenComponent(0, ComponentType);
+            builder.AddComponentParameter(1, "StyleClass", "table");
+            builder.CloseElement();
+        };
+    }
+
+    private readonly RenderFragment TableContent =@<div class="page-box">
+        <table class="table-default">
+            <thead>
+            <tr>
+                <td>First Name</td>
+                <td>Middle Name</td>
+                <td>Last Name</td>
+                <td>User Id</td>
+                <td>Password</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Test Name</td>
+                <td>Test Middle Name</td>
+                <td>Test Last Name</td>
+                <td>Test User Id</td>
+                <td>Test Password</td>
+            </tr>
+            <tr>
+                <td>Test Name</td>
+                <td>Test Middle Name</td>
+                <td>Test Last Name</td>
+                <td>Test User Id</td>
+                <td>Test Password</td>
+            </tr>
+            <tr>
+                <td>Test Name</td>
+                <td>Test Middle Name</td>
+                <td>Test Last Name</td>
+                <td>Test User Id</td>
+                <td>Test Password</td>
+            </tr>
+            <tr>
+                <td>Test Name</td>
+                <td>Test Middle Name</td>
+                <td>Test Last Name</td>
+                <td>Test User Id</td>
+                <td>Test Password</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>;
+}

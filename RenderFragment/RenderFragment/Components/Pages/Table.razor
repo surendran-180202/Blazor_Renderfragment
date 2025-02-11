@@ -1,5 +1,4 @@
-﻿
-<div class="page-box">
+﻿<div class="page-box">
     <table class="@StyleClass">
         <thead>
             <tr>
@@ -8,38 +7,37 @@
                 <td>Last Name</td>
                 <td>User Id</td>
                 <td>Password</td>
-            </tr>
+            </tr>   
         </thead>
         <tbody>
             <tr>
-                <td>Test Name</td>
-                <td>Test Middle Name</td>
-                <td>Test Last Name</td>
-                <td>Test User Id</td>
-                <td>Test Password</td>
+                <td>Surendran</td>
+                <td>-</td>
+                <td>B</td>
+                <td>surendran@123</td>
+                <td>098123</td>
             </tr>
             <tr>
-                <td>Test Name</td>
-                <td>Test Middle Name</td>
-                <td>Test Last Name</td>
-                <td>Test User Id</td>
-                <td>Test Password</td>
+                <td>Sivabalan</td>
+                <td>-</td>
+                <td>P</td>
+                <td>sivabalan@123</td>
+                <td>0981234</td>
             </tr>
             <tr>
-                <td>Test Name</td>
-                <td>Test Middle Name</td>
-                <td>Test Last Name</td>
-                <td>Test User Id</td>
-                <td>Test Password</td>
+                <td>AjithKumar</td>
+                <td>-</td>
+                <td>J</td>
+                <td>ajithkumar@123</td>
+                <td>password</td>
             </tr>
             <tr>
-                <td>Test Name</td>
-                <td>Test Middle Name</td>
-                <td>Test Last Name</td>
-                <td>Test User Id</td>
-                <td>Test Password</td>
+                <td>Anbarasan</td>
+                <td>-</td>
+                <td>A</td>
+                <td>anbarasan@123</td>
+                <td>anbu@123</td>
             </tr>
-
         </tbody>
     </table>
 </div>
@@ -48,4 +46,25 @@
 {
     [Parameter]
     public string StyleClass { get; set; } = "table-default";
+
+    private List<Employee> liEmployee = new List<Employee>()
+    {
+        new Employee()
+        {
+            Name = "Surendran",
+            MiddleName = "-",
+            LastName = "B",
+            UserId = "Surendran@123",
+            Password = "@Password"
+        },
+    };
+
+    private class Employee
+    {
+        public string Name { get; set; } = string.Empty;
+        public string MiddleName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public string UserId { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+    }
 }

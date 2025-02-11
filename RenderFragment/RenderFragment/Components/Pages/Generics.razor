@@ -1,0 +1,23 @@
+﻿@page "/generics"
+
+<h3>Parent Component</h3>
+
+<GenericsType1 TItem="Person" Items="@people">
+    <ItemContent>
+        <p>Name: @context.Name, Age: @context.Age</p>
+    </ItemContent>
+</GenericsType1>
+
+@code {
+    private List<Person> people = new()
+    {
+        new Person { Name = "John", Age = 30 },
+        new Person { Name = "Jane", Age = 25 }
+    };
+
+    public class Person
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+    }
+}

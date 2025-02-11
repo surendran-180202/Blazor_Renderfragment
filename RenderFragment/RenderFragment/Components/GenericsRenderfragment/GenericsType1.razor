@@ -1,0 +1,18 @@
+﻿@typeparam TItem
+
+<h3>Generic Child Component</h3>
+
+<ul>
+    @foreach (var item in Items)
+    {
+        <li>@ItemContent(item)</li>
+    }
+</ul>
+
+@code {
+    [Parameter]
+    public List<TItem> Items { get; set; }
+
+    [Parameter]
+    public RenderFragment<TItem> ItemContent { get; set; }
+}
