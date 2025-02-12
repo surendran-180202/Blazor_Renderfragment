@@ -1,0 +1,48 @@
+﻿.center--text {
+	text-align: center;
+}
+
+.page-box {
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.code--red
+{
+	color:darkred;
+}
+.headline {
+	font-weight: bold;
+	font-size: 22px;
+	margin: 10px;
+}
+
+.table-default {
+	width: 100%;
+}
+
+	.table-default thead {
+		background: rgba(0, 0, 0, 0.1);
+		height: 50px;
+	}
+
+		.table-default thead tr td {
+			padding: 20px 15px 20px 15px;
+			font-family: "Inter", Sans-serif;
+			font-size: 18px;
+			line-height: 1.35em;
+			font-weight: bold
+		}
+
+	.table-default tbody tr td {
+		padding: 15px;
+		font-family: "Inter", Sans-serif;
+		font-size: 18px;
+		line-height: 1.35em;
+	}
+
+		.table-default tbody tr td.heading-tage {
+			background: #b6b6f2 !important;
+			border-radius: 8px;
+			color: #fff !important;
+			border-bottom: 1px solid #fff0;
+		}
