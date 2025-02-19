@@ -1,0 +1,9 @@
+﻿<div class="page-box view-box">@ChildContent</div>
+
+@code
+{
+    RenderFragment ChildContent => builder =>
+    {
+        builder.AddContent(0, "Dear All, Welcome to TechForum");
+    };
+}

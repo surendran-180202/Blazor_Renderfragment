@@ -1,23 +1,46 @@
 ﻿@page "/generics"
 
-<h3>Parent Component</h3>
 
-<GenericsType1 TItem="Person" Items="@people">
-    <ItemContent>
-        <p>Name: @context.Name, Age: @context.Age</p>
-    </ItemContent>
-</GenericsType1>
+<section class="page-box view-box">
+    <h3>Parent Component</h3>
+
+    <GenericsType1 TItem="Person" Items="@people">
+        <ItemContent>
+            <p>FirstName: @context.FirstName , MiddleName: @context.MiddleName , LastName: @context.LastName , UserId: @context.UserId , Password: @context.Password </p>
+        </ItemContent>
+    </GenericsType1>
+
+</section>
 
 @code {
     private List<Person> people = new()
     {
-        new Person { Name = "John", Age = 30 },
-        new Person { Name = "Jane", Age = 25 }
+        new Person
+        {
+            FirstName = "Surendran",
+            MiddleName = "-",
+            LastName = "B",
+            UserId = "surendran@123",
+            Password = "\t098123"
+        },
+
+        new Person
+        {
+            FirstName = "Sivabalan",
+            MiddleName = "-",
+            LastName = "P",
+            UserId = "sivabalan@123",
+            Password = "0981234"
+        },
+
     };
 
     public class Person
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
+        public string FirstName { get; set; }
+        public string MiddleName { get; set; }
+        public string LastName { get; set; }
+        public string UserId { get; set; }
+        public string Password { get; set; }
     }
 }
