@@ -1,21 +1,33 @@
 ﻿@page "/generics"
 
-
-<section class="page-box view-box">
-    <h3>Parent Component</h3>
-
-    <GenericsType1 TItem="Person" Items="@people">
-        <ItemContent>
-            <p>FirstName: @context.FirstName , MiddleName: @context.MiddleName , LastName: @context.LastName , UserId: @context.UserId , Password: @context.Password </p>
-        </ItemContent>
-    </GenericsType1>
-
+<section class="center--text">
+    <h1><code class="code--red">RenderFragment Generics</code></h1>
 </section>
 
+<div class="headline">RenderFragment Case 1</div>
+
+<GenericsCase1 TItem="Employee" Items="@liEmployees">
+    <ItemContent>
+        <p>
+            FirstName: @context.FirstName ,
+            MiddleName: @context.MiddleName ,
+            LastName: @context.LastName ,
+            UserId: @context.UserId ,
+            Password: @context.Password
+        </p>
+    </ItemContent>
+</GenericsCase1>
+
+
+<div class="headline">RenderFragment Case 2</div>
+
+<GenericsCase2 />
+
+
 @code {
-    private List<Person> people = new()
+    private List<Employee> liEmployees = new()
     {
-        new Person
+        new Employee
         {
             FirstName = "Surendran",
             MiddleName = "-",
@@ -24,7 +36,7 @@
             Password = "\t098123"
         },
 
-        new Person
+        new Employee
         {
             FirstName = "Sivabalan",
             MiddleName = "-",
@@ -35,12 +47,12 @@
 
     };
 
-    public class Person
+    public class Employee
     {
-        public string FirstName { get; set; }
-        public string MiddleName { get; set; }
-        public string LastName { get; set; }
-        public string UserId { get; set; }
-        public string Password { get; set; }
+        public string FirstName { get; set; } = string.Empty;
+        public string MiddleName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public string UserId { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
     }
 }

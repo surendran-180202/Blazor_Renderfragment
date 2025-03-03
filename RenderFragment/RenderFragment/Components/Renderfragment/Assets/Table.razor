@@ -53,25 +53,4 @@
 {
     [Parameter]
     public string StyleClass { get; set; } = "table-default";
-
-    private List<Employee> liEmployee = new List<Employee>()
-    {
-        new Employee()
-        {
-            Name = "Surendran",
-            MiddleName = "-",
-            LastName = "B",
-            UserId = "Surendran@123",
-            Password = "@Password"
-        },
-    };
-
-    private class Employee
-    {
-        public string Name { get; set; } = string.Empty;
-        public string MiddleName { get; set; } = string.Empty;
-        public string LastName { get; set; } = string.Empty;
-        public string UserId { get; set; } = string.Empty;
-        public string Password { get; set; } = string.Empty;
-    }
 }

@@ -1,0 +1,24 @@
+﻿<div class="page-box view-box">
+
+    <table class="table">
+        <thead>
+            @HeaderContent
+        </thead>
+        <tbody>
+            @BodyContent
+        </tbody>
+    </table>
+    
+    @FooterContent
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment HeaderContent { get; set; }
+
+    [Parameter]
+    public RenderFragment BodyContent { get; set; }
+
+    [Parameter]
+    public RenderFragment FooterContent { get; set; }
+}

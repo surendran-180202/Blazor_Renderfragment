@@ -1,0 +1,55 @@
+﻿
+<section class="page-box">
+
+    <table class="table-default">
+        <thead>
+            <tr>
+                <td>First Name</td>
+                <td>Middle Name</td>
+                <td>Last Name</td>
+                <td>User Id</td>
+                <td>Password</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            @ChildContent
+
+        </tbody>
+    </table>
+
+</section>
+
+@code
+{
+    RenderFragment ChildContent => builder =>
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            builder.OpenElement(0, "tr");
+
+            builder.OpenElement(0, "td");
+            builder.AddContent(1, "Test FirstName");
+            builder.CloseElement();
+
+            builder.OpenElement(0, "td");
+            builder.AddContent(1, "Test MiddleName");
+            builder.CloseElement();
+
+            builder.OpenElement(0, "td");
+            builder.AddContent(1, "Test LastName");
+            builder.CloseElement();
+
+            builder.OpenElement(0, "td");
+            builder.AddContent(1, "Test UserId");
+            builder.CloseElement();
+
+            builder.OpenElement(0, "td");
+            builder.AddContent(1, "Test Password");
+            builder.CloseElement();
+
+            builder.CloseElement();
+
+        };
+    };
+}

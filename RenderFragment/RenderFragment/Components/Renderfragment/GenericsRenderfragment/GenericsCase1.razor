@@ -1,0 +1,22 @@
+﻿@typeparam TItem
+
+<section class="page-box view-box">
+
+    <h3>Generic Child Component</h3>
+
+    <ul>
+        @foreach (var item in Items)
+        {
+            <li>@ItemContent(item)</li>
+        }
+    </ul>
+
+</section>
+
+@code {
+    [Parameter]
+    public List<TItem> Items { get; set; }
+
+    [Parameter]
+    public RenderFragment<TItem> ItemContent { get; set; }
+}
