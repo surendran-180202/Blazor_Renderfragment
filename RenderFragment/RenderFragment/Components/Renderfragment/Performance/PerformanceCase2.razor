@@ -1,0 +1,38 @@
+﻿
+<code><h1> @DateTime.Now.ToString("hh:mm:ss.fff");</h1></code>
+
+<h3>@ChildContent</h3>
+
+<code><h1> @DateTime.Now.ToString("hh:mm:ss.fff");</h1></code>
+
+@code {
+    private readonly RenderFragment ChildContent =@<div class="page-box">
+        <table class="table-default">
+            <thead>
+                <tr>
+                    <td>First Name</td>
+                    <td>Middle Name</td>
+                    <td>Last Name</td>
+                    <td>User Id</td>
+                    <td>Password</td>
+                </tr>
+            </thead>
+            <tbody>
+
+               
+                @for (int i = 0; i < 100000; i++)
+                {
+                    <tr>
+                        <td>Test FirstName</td>
+                        <td>Test MiddleName</td>
+                        <td>Test LastName</td>
+                        <td>Test UserId</td>
+                        <td>Test Password</td>
+                    </tr>
+                }
+               
+
+            </tbody>
+        </table>
+    </div>;
+}

@@ -6,8 +6,8 @@
 
 <div class="headline">RenderFragment Case 1</div>
 
-<GenericsCase1 TItem="Employee" Items="@liEmployees">
-    <ItemContent>
+<GenericsCase1 Type="Employee" Data="@liEmployees">
+    <DataContent>
         <p>
             FirstName: @context.FirstName ,
             MiddleName: @context.MiddleName ,
@@ -15,7 +15,7 @@
             UserId: @context.UserId ,
             Password: @context.Password
         </p>
-    </ItemContent>
+    </DataContent>
 </GenericsCase1>
 
 

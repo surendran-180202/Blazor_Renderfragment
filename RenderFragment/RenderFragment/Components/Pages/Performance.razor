@@ -1,71 +1,16 @@
 ﻿@page "/performanceTest"
 
 <section class="page-box">
-
-    <table class="table-default">
-        <thead>
-            <tr>
-                <td>First Name</td>
-                <td>Middle Name</td>
-                <td>Last Name</td>
-                <td>User Id</td>
-                <td>Password</td>
-            </tr>
-        </thead>
-        <tbody>
-            <code><h1>@Start();</h1></code>
-
-            @GetTableContent()
-
-            <code><h1>@Stop();</h1></code>
-        </tbody>
-    </table>
+    
+    <div class="headline">Performance Case 1</div>
+    <PerformanceCase1/>
+    
+    <div class="headline">Performance Case 2</div>
+    <PerformanceCase2 />
 
 </section>
 
 
 @code {
-    RenderFragment GetTableContent()
-    {
-        return builder =>
-        {
-            for (int i = 0; i < 10000; i++)
-            {
-                builder.OpenElement(0, "tr");
-
-                builder.OpenElement(0, "td");
-                builder.AddContent(1, "Test FirstName");
-                builder.CloseElement();
-
-                builder.OpenElement(0, "td");
-                builder.AddContent(1, "Test MiddleName");
-                builder.CloseElement();
-
-                builder.OpenElement(0, "td");
-                builder.AddContent(1, "Test LastName");
-                builder.CloseElement();
-
-                builder.OpenElement(0, "td");
-                builder.AddContent(1, "Test UserId");
-                builder.CloseElement();
-
-                builder.OpenElement(0, "td");
-                builder.AddContent(1, "Test Password");
-                builder.CloseElement();
-
-                builder.CloseElement();
-            }
-        };
-    }
-
-    public string Start()
-    {
-        return DateTime.Now.ToString("hh:mm:ss.fff");
-    }
-
-    public string Stop()
-    {
-        return DateTime.Now.ToString("hh:mm:ss.fff");
-    }
 
 }
