@@ -51,3 +51,47 @@
 {
 	padding:20px;
 }
+
+
+.switch {
+	display: inline-block;
+}
+
+	.switch input {
+		display: none;
+	}
+
+	.switch label {
+		display: block;
+		width: 60px;
+		height: 30px;
+		padding: 3px;
+		border-radius: 15px;
+		border: 2px solid black;
+		cursor: pointer;
+		transition: 0.3s;
+	}
+
+		.switch label::after {
+			content: "";
+			display: inherit;
+			width: 20px;
+			height: 20px;
+			border-radius: 12px;
+			background: black;
+			transition: 0.3s;
+		}
+
+	.switch input:checked ~ label {
+		border-color: black;
+	}
+
+		.switch input:checked ~ label::after {
+			translate: 30px 0;
+			background: black;
+		}
+
+	.switch input:disabled ~ label {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}

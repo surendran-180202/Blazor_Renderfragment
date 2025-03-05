@@ -24,28 +24,30 @@
 {
     RenderFragment ChildContent => builder =>
     {
+        int nIndex = 0;
+
         for (int i = 0; i < 5; i++)
         {
-            builder.OpenElement(0, "tr");
+            builder.OpenElement(nIndex++, "tr");
 
-            builder.OpenElement(0, "td");
-            builder.AddContent(1, "Test FirstName");
+            builder.OpenElement(nIndex++, "td");
+            builder.AddContent(nIndex++, "Test FirstName");
             builder.CloseElement();
 
-            builder.OpenElement(0, "td");
-            builder.AddContent(1, "Test MiddleName");
+            builder.OpenElement(nIndex++, "td");
+            builder.AddContent(nIndex++, "Test MiddleName");
             builder.CloseElement();
 
-            builder.OpenElement(0, "td");
-            builder.AddContent(1, "Test LastName");
+            builder.OpenElement(nIndex++, "td");
+            builder.AddContent(nIndex++, "Test LastName");
             builder.CloseElement();
 
-            builder.OpenElement(0, "td");
-            builder.AddContent(1, "Test UserId");
+            builder.OpenElement(nIndex++, "td");
+            builder.AddContent(nIndex++, "Test UserId");
             builder.CloseElement();
 
-            builder.OpenElement(0, "td");
-            builder.AddContent(1, "Test Password");
+            builder.OpenElement(nIndex++, "td");
+            builder.AddContent(nIndex++, "Test Password");
             builder.CloseElement();
 
             builder.CloseElement();

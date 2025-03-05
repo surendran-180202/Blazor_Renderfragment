@@ -1,16 +1,36 @@
 ﻿@page "/performanceTest"
+@rendermode InteractiveServer
+
+<span class="switch">
+    <input id="btn-toggle" type="checkbox" />
+    <label for="btn-toggle" @onclick="ToggleTestCase"></label>
+</span>
 
 <section class="page-box">
-    
-    <div class="headline">Performance Case 1</div>
-    <PerformanceCase1/>
-    
-    <div class="headline">Performance Case 2</div>
-    <PerformanceCase2 />
+
+    @if (bToggleTestcase)
+    {
+        <div class="headline">Performance Case 1</div>
+        <PerformanceCase1/>
+    }
+    else
+    {
+        <div class="headline">Performance Case 2</div>
+        <PerformanceCase2/>
+    }
 
 </section>
 
 
-@code {
+@code 
+{
+    private bool bToggleTestcase { get; set; }
+
+    private void ToggleTestCase()
+    {
+        bToggleTestcase = !bToggleTestcase;
+
+        StateHasChanged();
+    }
 
 }
