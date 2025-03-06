@@ -1,11 +1,25 @@
-﻿<div class="page-box view-box">
-    @ChildContent("All")
+﻿
+<div class="page-box view-box">
+    
+    @ChildContent1("All")
+
+</div>
+
+<div class="page-box view-box">
+
+    @ChildContent2(180202)
+
 </div>
 
 @code {
 
-    private RenderFragment<string> ChildContent => (strEmployeeName) => builder =>
+    private RenderFragment<string> ChildContent1 => (strEmployeeName) => builder =>
     {
         builder.AddContent(0, $"Dear {strEmployeeName}, Welcome to TechForum");
+    };
+
+    private RenderFragment<int> ChildContent2 => (nEmployeeId) => builder =>
+    {
+        builder.AddContent(0, $"Dear {nEmployeeId}, Welcome to TechForum");
     };
 }
