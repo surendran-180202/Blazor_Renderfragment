@@ -4,24 +4,23 @@
     <h1><code class="code--red">RenderFragment Generics</code></h1>
 </section>
 
-<div class="headline">RenderFragment Case 1</div>
 
-<GenericsCase1 Type="Employee" Data="@liEmployees">
-    <DataContent>
-        <p>
-            FirstName: @context.FirstName ,
-            MiddleName: @context.MiddleName ,
-            LastName: @context.LastName ,
-            UserId: @context.UserId ,
-            Password: @context.Password
-        </p>
-    </DataContent>
-</GenericsCase1>
+<section class="fragment-types">
 
+    <GenericsCase1 Type="Employee" Data="@liEmployees">
+        <DataContent>
+            <td> @context.FirstName </td>
+            <td> @context.MiddleName </td>
+            <td> @context.LastName </td>
+            <td> @context.UserId </td>
+            <td> @context.Password </td>
+        </DataContent>
+    </GenericsCase1>
+    
 
-<div class="headline">RenderFragment Case 2</div>
+    <GenericsCase2/>
 
-<GenericsCase2 />
+</section>
 
 
 @code {
@@ -43,6 +42,33 @@
             LastName = "P",
             UserId = "sivabalan@123",
             Password = "0981234"
+        },
+
+        new Employee
+        {
+            FirstName = "AjithKumar",
+            MiddleName = "-",
+            LastName = "J",
+            UserId = "ajithkumar@123",
+            Password = "password"
+        },
+
+        new Employee
+        {
+            FirstName = "Anbarasan",
+            MiddleName = "-",
+            LastName = "A",
+            UserId = "anbarasan@123",
+            Password = "0981234"
+        },
+
+        new Employee
+        {
+            FirstName = "ManiRaj",
+            MiddleName = "-",
+            LastName = "A",
+            UserId = "maniraj@123",
+            Password = "mani@123"
         },
 
     };

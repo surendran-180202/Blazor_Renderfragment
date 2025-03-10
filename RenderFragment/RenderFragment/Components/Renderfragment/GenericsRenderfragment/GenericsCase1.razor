@@ -1,15 +1,30 @@
 ﻿@typeparam Type
 
-<section class="page-box view-box">
+<section class="page-box view-box margin-box">
+    
+    <div class="headline">Employee Management: </div>
 
-    <h3>Generic Child Component</h3>
+    <table class="table header--lavender">
+        <thead>
+        <tr>
+            <td>First Name</td>
+            <td>Middle Name</td>
+            <td>Last Name</td>
+            <td>User Id</td>
+            <td>Password</td>
+        </tr>
+        </thead>
+        <tbody>
 
-    <ul>
         @foreach (var item in Data)
         {
-            <li>@DataContent(item)</li>
+            <tr>
+                @DataContent(item)
+            </tr>
         }
-    </ul>
+
+        </tbody>
+    </table>
 
 </section>
 

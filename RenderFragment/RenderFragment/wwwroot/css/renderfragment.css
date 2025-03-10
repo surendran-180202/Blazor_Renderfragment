@@ -41,7 +41,6 @@
     }
 
         .table-legacy tbody tr td.heading-tage {
-            background: #b6b6f2 !important;
             border-radius: 8px;
             color: #fff !important;
             border-bottom: 1px solid #fff0;
@@ -69,7 +68,9 @@
 
 .table,
 .table-legacy,
-.fragment-types {
+.fragment-types,
+.page-box
+{
     margin-bottom: 50px;
 }
 
