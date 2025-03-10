@@ -1,19 +1,23 @@
 ﻿
-<section class="page-box">
 
-    <table class="table-default">
+
+<section class="page-box">
+    
+    <div class="headline">Bills Management: </div>
+
+    <table class="table header--antiquewhite">
         <thead>
-            <tr>
-                <td>First Name</td>
-                <td>Middle Name</td>
-                <td>Last Name</td>
-                <td>User Id</td>
-                <td>Password</td>
-            </tr>
+        <tr>
+            <td>Bill ID</td>
+            <td>Date</td>
+            <td>Amount</td>
+            <td>Attachment</td>
+            <td>Remarks</td>
+        </tr>
         </thead>
         <tbody>
 
-            @ChildContent
+        @ChildContent
 
         </tbody>
     </table>
@@ -31,23 +35,23 @@
             builder.OpenElement(nIndex++, "tr");
 
             builder.OpenElement(nIndex++, "td");
-            builder.AddContent(nIndex++, "Test FirstName");
+            builder.AddContent(nIndex++, "Test Bill ID");
             builder.CloseElement();
 
             builder.OpenElement(nIndex++, "td");
-            builder.AddContent(nIndex++, "Test MiddleName");
+            builder.AddContent(nIndex++, "Test Date");
             builder.CloseElement();
 
             builder.OpenElement(nIndex++, "td");
-            builder.AddContent(nIndex++, "Test LastName");
+            builder.AddContent(nIndex++, "Test Amount");
             builder.CloseElement();
 
             builder.OpenElement(nIndex++, "td");
-            builder.AddContent(nIndex++, "Test UserId");
+            builder.AddContent(nIndex++, "Test Attachment");
             builder.CloseElement();
 
             builder.OpenElement(nIndex++, "td");
-            builder.AddContent(nIndex++, "Test Password");
+            builder.AddContent(nIndex++, "Test Remarks");
             builder.CloseElement();
 
             builder.CloseElement();

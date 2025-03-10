@@ -1,52 +1,56 @@
-﻿<h3>@ChildContent</h3>
+﻿
+<h3>@ChildContent</h3>
 
 @code {
     private readonly RenderFragment ChildContent =@<div class="page-box">
-        <table class="table-default">
+
+        <div class="headline">Tasks Management: </div>
+
+        <table class="table-legacy">
             <thead>
                 <tr>
-                    <td>First Name</td>
-                    <td>Middle Name</td>
-                    <td>Last Name</td>
-                    <td>User Id</td>
-                    <td>Password</td>
+                    <td>Ticket Number</td>
+                    <td>Task Name</td>
+                    <td>Responsible Person</td>
+                    <td>Created by</td>
+                    <td>Target Date</td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <td>#346234</td>
+                    <td>Tab Control Implementation</td>
                     <td>Surendran</td>
-                    <td>-</td>
-                    <td>B</td>
-                    <td>surendran@123</td>
-                    <td>098123</td>
+                    <td>Senthilkumar Balasubramanian</td>
+                    <td>Feb 25</td>
                 </tr>
                 <tr>
+                    <td>#6497629</td>
+                    <td>UC PlaceHolder Implementation</td>
                     <td>Sivabalan</td>
-                    <td>-</td>
-                    <td>P</td>
-                    <td>sivabalan@123</td>
-                    <td>0981234</td>
+                    <td>Senthilkumar Balasubramanian</td>
+                    <td>March 27</td>
                 </tr>
                 <tr>
+                    <td>#62846823</td>
+                    <td>FileUpload Control Implementation</td>
                     <td>AjithKumar</td>
-                    <td>-</td>
-                    <td>J</td>
-                    <td>ajithkumar@123</td>
-                    <td>password</td>
+                    <td>Senthilkumar Balasubramanian</td>
+                    <td>Apr 20</td>
                 </tr>
                 <tr>
+                    <td>#8563820</td>
+                    <td>DataGrid TimeLine Column Implementation</td>
                     <td>Anbarasan</td>
-                    <td>-</td>
-                    <td>A</td>
-                    <td>anbarasan@123</td>
-                    <td>anbu@123</td>
+                    <td>Senthilkumar Balasubramanian</td>
+                    <td>May 02</td>
                 </tr>
                 <tr>
+                    <td>#98345823</td>
+                    <td>FormPart Manager Implementation</td>
                     <td>ManiRaj</td>
-                    <td>-</td>
-                    <td>R</td>
-                    <td>maniraj@123</td>
-                    <td>mani@123</td>
+                    <td>Senthilkumar Balasubramanian</td>
+                    <td>Jun 04</td>
                 </tr>
             </tbody>
         </table>

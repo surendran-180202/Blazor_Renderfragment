@@ -1,0 +1,65 @@
+﻿<div class="page-box">
+
+    <div class="headline">Students Management: </div>
+
+    <table class="@StyleClass">
+        <thead>
+            <tr>
+                <td>Registration No</td>
+                <td>Date Of Joining</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Department</td>
+                <td>Year</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>77689324234</td>
+                <td>12.04.2024</td>
+                <td>Surendran</td>
+                <td>B</td>
+                <td>BE.ECE</td>
+                <td>IV</td>
+            </tr>
+            <tr>
+                <td>746332450264</td>
+                <td>28.05.2022</td>
+                <td>Sivabalan</td>
+                <td>P</td>
+                <td>BE.CSE</td>
+                <td>IV</td>
+            </tr>
+            <tr>
+                <td>537823132954</td>
+                <td>01.06.2025</td>
+                <td>AjithKumar</td>
+                <td>J</td>
+                <td>MBA</td>
+                <td>II</td>
+            </tr>
+            <tr>
+                <td>436145372827</td>
+                <td>11.12.2021</td>
+                <td>Anbarasan</td>
+                <td>A</td>
+                <td>ME.CSE</td>
+                <td>II</td>
+            </tr>
+            <tr>
+                <td>876564454321</td>
+                <td>24.06.2020</td>
+                <td>ManiRaj</td>
+                <td>R</td>
+                <td>ME.EEE</td>
+                <td>II</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+@code
+{
+    [Parameter]
+    public string StyleClass { get; set; } = "table header--default";
+}

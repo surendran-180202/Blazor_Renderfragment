@@ -1,97 +1,78 @@
 ﻿.center--text {
-	text-align: center;
+    text-align: center;
 }
 
 .page-box {
-	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.code--red
-{
-	color:darkred;
+.code--red {
+    color: darkred;
 }
+
 .headline {
-	font-weight: bold;
-	font-size: 22px;
-	margin: 10px;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 10px;
 }
 
-.table-default {
-	width: 100%;
+.table-legacy {
+    width: 100%;
 }
 
-	.table-default thead {
-		background: rgba(0, 0, 0, 0.1);
-		height: 50px;
-	}
+    .table-legacy thead {
+        background: rgba(0, 0, 0, 0.1);
+        height: 50px;
+    }
 
-		.table-default thead tr td {
-			padding: 20px 15px 20px 15px;
-			font-family: "Inter", Sans-serif;
-			font-size: 18px;
-			line-height: 1.35em;
-			font-weight: bold
-		}
+        .table-legacy thead tr td {
+            padding: 20px 15px 20px 15px;
+            font-family: "Inter", Sans-serif;
+            font-size: 18px;
+            line-height: 1.35em;
+            font-weight: bold
+        }
 
-	.table-default tbody tr td {
-		padding: 15px;
-		font-family: "Inter", Sans-serif;
-		font-size: 18px;
-		line-height: 1.35em;
-	}
+    .table-legacy tbody tr td {
+        padding: 15px;
+        font-family: "Inter", Sans-serif;
+        font-size: 14px;
+        line-height: 1.35em;
+    }
 
-		.table-default tbody tr td.heading-tage {
-			background: #b6b6f2 !important;
-			border-radius: 8px;
-			color: #fff !important;
-			border-bottom: 1px solid #fff0;
-		}
+        .table-legacy tbody tr td.heading-tage {
+            background: #b6b6f2 !important;
+            border-radius: 8px;
+            color: #fff !important;
+            border-bottom: 1px solid #fff0;
+        }
 
-.view-box
-{
-	padding:20px;
+.table.header--lavender thead tr td {
+    background: #b6b6f2 !important;
 }
 
-
-.switch {
-	display: inline-block;
+.table.header--default thead tr td {
+    background-color: darkseagreen;
 }
 
-	.switch input {
-		display: none;
-	}
+.table.header--antiquewhite thead tr td {
+    background-color: antiquewhite;
+}
 
-	.switch label {
-		display: block;
-		width: 60px;
-		height: 30px;
-		padding: 3px;
-		border-radius: 15px;
-		border: 2px solid black;
-		cursor: pointer;
-		transition: 0.3s;
-	}
+.table.header--darksalmon thead tr td {
+    background-color: darksalmon;
+}
 
-		.switch label::after {
-			content: "";
-			display: inherit;
-			width: 20px;
-			height: 20px;
-			border-radius: 12px;
-			background: black;
-			transition: 0.3s;
-		}
+.table thead tr td {
+    font-weight: bold;
+}
 
-	.switch input:checked ~ label {
-		border-color: black;
-	}
+.table,
+.table-legacy,
+.fragment-types {
+    margin-bottom: 50px;
+}
 
-		.switch input:checked ~ label::after {
-			translate: 30px 0;
-			background: black;
-		}
-
-	.switch input:disabled ~ label {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
+.view-box {
+    padding: 20px;
+}

@@ -1,4 +1,6 @@
-﻿<div>@GetChildContent()</div>
+﻿
+
+<div>@GetChildContent()</div>
 
 @code {
     [Parameter]
@@ -9,7 +11,7 @@
         return builder =>
                {
                    builder.OpenComponent(0, ComponentType);
-                   builder.AddComponentParameter(1, "StyleClass", "table");
+                   builder.AddComponentParameter(1, "StyleClass", "table header--default");
                    builder.CloseElement();
                };
     }
