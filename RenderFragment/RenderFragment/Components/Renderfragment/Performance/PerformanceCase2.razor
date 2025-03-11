@@ -2,13 +2,13 @@
 
 <section class="page-box">
 
-<h3>@ChildContent</h3>
+    @ChildContent
 
 </section>
 
 @code {
     private readonly RenderFragment ChildContent =@<div class="page-box">
-        <table class="table-default">
+        <table class="table-legacy header--antiquewhite">
             <thead>
                 <tr>
                     <td>First Name</td>
@@ -20,18 +20,18 @@
             </thead>
             <tbody>
 
-               
-                @for (int i = 0; i < 100000; i++)
-                {
-                    <tr>
-                        <td>Test FirstName</td>
-                        <td>Test MiddleName</td>
-                        <td>Test LastName</td>
-                        <td>Test UserId</td>
-                        <td>Test Password</td>
-                    </tr>
-                }
-               
+
+            @for (int i = 0; i < 100000; i++)
+            {
+                <tr>
+                    <td>Test FirstName</td>
+                    <td>Test MiddleName</td>
+                    <td>Test LastName</td>
+                    <td>Test UserId</td>
+                    <td>Test Password</td>
+                </tr>
+            }
+
 
             </tbody>
         </table>

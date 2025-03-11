@@ -1,0 +1,87 @@
+﻿@page "/performanceTest5"
+
+<section class="page-box">
+
+    <table class="table-legacy header--antiquewhite">
+        <thead>
+            <tr>
+                <td>First Name</td>
+                <td>Middle Name</td>
+                <td>Last Name</td>
+                <td>User Id</td>
+                <td>Password</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            @DataGridColumn.Render(liEmployees)
+
+        </tbody>
+    </table>
+
+</section>
+
+
+
+@code
+{
+    readonly DataGridColumn DataGridColumn = new DataGridColumn();
+
+    private List<Employee> liEmployees = new()
+                                                  {
+                                                      new Employee
+                                                      {
+                                                          FirstName = "Surendran",
+                                                          MiddleName = "-",
+                                                          LastName = "B",
+                                                          UserId = "surendran@123",
+                                                          Password = "098123"
+                                                      },
+
+                                                      new Employee
+                                                      {
+                                                          FirstName = "Sivabalan",
+                                                          MiddleName = "-",
+                                                          LastName = "P",
+                                                          UserId = "sivabalan@123",
+                                                          Password = "0981234"
+                                                      },
+
+                                                      new Employee
+                                                      {
+                                                          FirstName = "AjithKumar",
+                                                          MiddleName = "-",
+                                                          LastName = "J",
+                                                          UserId = "ajithkumar@123",
+                                                          Password = "password"
+                                                      },
+
+                                                      new Employee
+                                                      {
+                                                          FirstName = "Anbarasan",
+                                                          MiddleName = "-",
+                                                          LastName = "A",
+                                                          UserId = "anbarasan@123",
+                                                          Password = "0981234"
+                                                      },
+
+                                                      new Employee
+                                                      {
+                                                          FirstName = "ManiRaj",
+                                                          MiddleName = "-",
+                                                          LastName = "A",
+                                                          UserId = "maniraj@123",
+                                                          Password = "mani@123"
+                                                      },
+
+                                                  };
+
+    public class Employee
+    {
+        public string FirstName { get; set; } = string.Empty;
+        public string MiddleName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public string UserId { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+    }
+}

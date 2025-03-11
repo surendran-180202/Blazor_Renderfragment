@@ -1,0 +1,39 @@
+﻿@code
+{
+    public RenderFragment Render(List<PerformanceCase5.Employee> liEmployees)
+    {
+        return builder =>
+         {
+             int nIndex = 0;
+
+             for (int i = 0; i < liEmployees.Count; i++)
+             {
+                 builder.OpenElement(nIndex++, "tr");
+
+                 builder.OpenElement(nIndex++, "td");
+                 builder.AddContent(nIndex++, liEmployees[i].FirstName);
+                 builder.CloseElement();
+
+                 builder.OpenElement(nIndex++, "td");
+                 builder.AddContent(nIndex++, liEmployees[i].MiddleName);
+                 builder.CloseElement();
+
+                 builder.OpenElement(nIndex++, "td");
+                 builder.AddContent(nIndex++, liEmployees[i].LastName);
+                 builder.CloseElement();
+
+                 builder.OpenElement(nIndex++, "td");
+                 builder.AddContent(nIndex++, liEmployees[i].UserId);
+                 builder.CloseElement();
+
+                 builder.OpenElement(nIndex++, "td");
+                 builder.AddContent(nIndex++, liEmployees[i].Password);
+                 builder.CloseElement();
+
+                 builder.CloseElement();
+
+             };
+         };
+    }
+
+}

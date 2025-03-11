@@ -1,4 +1,4 @@
-﻿@typeparam Type
+﻿@typeparam TModal
 
 <section class="page-box view-box margin-box">
     
@@ -30,8 +30,8 @@
 
 @code {
     [Parameter]
-    public List<Type> Data { get; set; }
+    public List<TModal> Data { get; set; }
 
     [Parameter]
-    public RenderFragment<Type> DataContent { get; set; }
+    public RenderFragment<TModal> DataContent { get; set; }
 }

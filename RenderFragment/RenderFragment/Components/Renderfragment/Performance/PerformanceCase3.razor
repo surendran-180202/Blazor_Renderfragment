@@ -1,0 +1,36 @@
+﻿@page "/performanceTest3"
+
+<section class="page-box">
+
+    <table class="table-legacy header--antiquewhite">
+        <thead>
+            <tr>
+                <td>First Name</td>
+                <td>Middle Name</td>
+                <td>Last Name</td>
+                <td>User Id</td>
+                <td>Password</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            @GetTableContent()
+
+        </tbody>
+    </table>
+
+</section>
+
+@code {
+    RenderFragment GetTableContent()
+    {
+        return builder =>
+               {
+                   for (int i = 0; i < 100000; i++)
+                   {
+                       builder.OpenComponent(i, typeof(DataColumn));
+                       builder.CloseElement();
+                   }
+               };
+    }
+}

@@ -18,7 +18,7 @@
 
     <div class="page-box view-box">
 
-        @Greetings2(180202)
+        @EmployeeId(180202)
 
     </div>
 </div>
@@ -28,12 +28,12 @@
 
     private RenderFragment<string> Greetings => (strEmployeeName) => builder =>
     {
-        builder.AddContent(0, $"Dear {strEmployeeName}, Welcome to TechForum");
+        builder.AddContent(0, $"Dear {strEmployeeName}, Welcome to TechForum.");
     };
 
-    private RenderFragment<int> Greetings2 => (nEmployeeId) => builder =>
+    private RenderFragment<int> EmployeeId => (nEmployeeId) => builder =>
     {
-        builder.AddContent(0, $"Dear {nEmployeeId}, Welcome to TechForum");
+        builder.AddContent(0, $"Employee id is {nEmployeeId}.");
     };
 }
 

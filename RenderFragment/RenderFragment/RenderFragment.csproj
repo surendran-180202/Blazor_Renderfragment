@@ -6,4 +6,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Components\Pages\Performance.razor" />
+    <Content Remove="Components\Renderfragment\Assets\DataGridColumn.razor" />
+    <Content Remove="Components\Renderfragment\Performance\PerformanceCase4.razor" />
+    <Content Remove="Components\Renderfragment\Performance\PerformanceCase5.razor" />
+  </ItemGroup>
+
 </Project>
